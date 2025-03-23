@@ -5,6 +5,6 @@ package com.jggundl.parenthesis;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        ValidParenthesis v = ValidParenthesis.getInstance();
     }
 }
