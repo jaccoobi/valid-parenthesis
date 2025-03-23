@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Unit test for valid-parenthesis.
  */
-public class AppTest {
+public class StackTest {
 
     /**
      * Rigorous Test :-)
