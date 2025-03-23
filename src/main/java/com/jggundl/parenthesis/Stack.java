@@ -13,15 +13,15 @@ public class Stack {
         return size;
     }
 
-    public void push(Node newNode) {
+    public void push() {
         if (this.top != null) {
+            Node newNode = new Node();
             newNode.setNode(this.top);
             this.top = newNode;
-            this.size++;
         } else {
-            this.top = newNode;
-            this.size++;
+            this.top = new Node();
         }
+        this.size++;
     }
 
     public Node pop() {

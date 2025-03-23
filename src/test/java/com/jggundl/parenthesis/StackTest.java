@@ -15,23 +15,23 @@ public class StackTest {
     @Test
     public void testStackPushWithMultipleNodes() {
         Stack stack = new Stack();
-        stack.push(new Node());
-        stack.push(new Node());
+        stack.push();
+        stack.push();
         assertEquals(2, stack.getSize());
     }
 
     @Test
     public void testStackPushWithSingleNode() {
         Stack stack = new Stack();
-        stack.push(new Node());
+        stack.push();
         assertEquals(1, stack.getSize());
     }
 
     @Test
     public void testStackPopWithMultipleNodes() {
         Stack stack = new Stack();
-        stack.push(new Node());
-        stack.push(new Node());
+        stack.push();
+        stack.push();
         assertNotNull(stack.pop());
         assertEquals(1, stack.getSize());
     }
@@ -39,7 +39,7 @@ public class StackTest {
     @Test
     public void testStackPopWithSingleNode() {
         Stack stack = new Stack();
-        stack.push(new Node());
+        stack.push();
         assertNotNull(stack.pop());
         assertEquals(0, stack.getSize());
     }
@@ -53,7 +53,7 @@ public class StackTest {
     @Test
     public void testStackPeek() {
         Stack stack = new Stack();
-        stack.push(new Node());
+        stack.push();
         assertNotNull(stack.peek());
     }
 }

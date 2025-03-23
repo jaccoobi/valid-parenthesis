@@ -14,4 +14,12 @@ public class ValidParenthesis {
         }
         return instance;
     }
+
+    public void checkString(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '(') {
+                this.stack.push();
+            }
+        }
+    }
 }
