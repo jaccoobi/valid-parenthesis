@@ -1,10 +1,9 @@
 package com.jggundl.parenthesis;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class ValidParenthesis {
     private static ValidParenthesis instance;
@@ -34,13 +33,13 @@ public class ValidParenthesis {
     }
 
     public boolean checkFile(Path filePath) {
+        byte[] bytes;
         try {
-            byte[] bytes = Files.readAllBytes(filePath);
+            bytes = Files.readAllBytes(filePath);
         } catch (IOException e) {
             System.err.println("Cannot read bytes from file '" + filePath + "'\nError: " + e.toString());
             return false;
         }
-        this.checkString(filePath.toString());
-        return this.stack.getSize() == 0;
+        return this.checkString(Arrays.toString(bytes));
     }
 }
