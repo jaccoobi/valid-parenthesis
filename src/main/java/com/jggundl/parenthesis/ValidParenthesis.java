@@ -37,7 +37,7 @@ public class ValidParenthesis {
         try {
             bytes = Files.readAllBytes(filePath);
         } catch (IOException e) {
-            System.err.println("Cannot read bytes from file '" + filePath + "'\nError: " + e.toString());
+            System.err.println("Cannot read bytes from file '" + filePath + "'\nError: " + e);
             return false;
         }
         return this.checkString(Arrays.toString(bytes));
