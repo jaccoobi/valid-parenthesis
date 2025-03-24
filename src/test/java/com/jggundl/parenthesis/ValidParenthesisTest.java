@@ -2,6 +2,9 @@ package com.jggundl.parenthesis;
 
 import org.junit.jupiter.api.Test;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -23,5 +26,12 @@ public class ValidParenthesisTest {
         ValidParenthesis v = ValidParenthesis.getInstance();
         String str = "public static void main(String[] args)";
         assertTrue(v.checkString(str));
+    }
+
+    @Test
+    public void checkValidParenthesisInFile() {
+        ValidParenthesis v = ValidParenthesis.getInstance();
+        Path path = Paths.get("src/test/java/com/jggundl/parenthesis/FileTest.txt");
+        assertTrue(v.checkFile(path));
     }
 }

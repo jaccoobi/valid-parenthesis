@@ -1,0 +1,9 @@
+public class FileTest {
+    public static void main(String[] args) {
+        testMethod();
+        testMethodWithLines(
+            arg1,
+            arg2
+        );
+    }
+}
