@@ -24,7 +24,7 @@ public class ValidParenthesisTest {
     @Test
     public void checkValidParenthesis() {
         ValidParenthesis v = ValidParenthesis.getInstance();
-        String str = "public static void main(String[] args)";
+        String str = "public static void main(String[] args) {}";
         assertTrue(v.checkString(str));
     }
 
