@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
         ValidParenthesis v = ValidParenthesis.getInstance();
         if (args[0] != null) {
-            Path p = Paths.get((String) args[0]);
+            Path p = Paths.get(args[0]);
             System.out.println(v.checkFile(p));
         }
     }
