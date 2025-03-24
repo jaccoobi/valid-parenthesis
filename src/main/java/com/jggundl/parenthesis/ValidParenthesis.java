@@ -26,6 +26,14 @@ public class ValidParenthesis {
                 this.stack.push();
             } else if (str.charAt(i) == ')') {
                 this.stack.pop();
+            } else if (str.charAt(i) == '{') {
+                this.stack.push();
+            } else if (str.charAt(i) == '}') {
+                this.stack.pop();
+            } else if (str.charAt(i) == '[') {
+                this.stack.push();
+            } else if (str.charAt(i) == ']') {
+                this.stack.pop();
             }
         }
 
