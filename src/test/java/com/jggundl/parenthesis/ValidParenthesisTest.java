@@ -12,26 +12,33 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ValidParenthesisTest {
 
-    /**
-     * Test the ValidParenthesis singleton.
-     */
-    @Test
-    public void validParenthesisSingletonTest() {
-        ValidParenthesis v = ValidParenthesis.getInstance();
-        assertNotNull(v);
-    }
+  /**
+   * Test the ValidParenthesis singleton.
+   */
+  @Test
+  public void validParenthesisSingletonTest() {
+    ValidParenthesis v = ValidParenthesis.getInstance();
+    assertNotNull(v);
+  }
 
-    @Test
-    public void checkValidParenthesis() {
-        ValidParenthesis v = ValidParenthesis.getInstance();
-        String str = "public static void main(String[] args) {}";
-        assertTrue(v.checkString(str));
-    }
+  @Test
+  public void checkValidParenthesis() {
+    ValidParenthesis v = ValidParenthesis.getInstance();
+    String str = "public static void main(String[] args) {}";
+    assertTrue(v.checkString(str));
+  }
 
-    @Test
-    public void checkValidParenthesisInFile() {
-        ValidParenthesis v = ValidParenthesis.getInstance();
-        Path path = Paths.get("src/test/resources/FileTest.txt");
-        assertTrue(v.checkFile(path));
-    }
+  @Test
+  public void checkValidParenthesisInFile() {
+    ValidParenthesis v = ValidParenthesis.getInstance();
+    Path path = Paths.get("src/test/resources/FileTest.txt");
+    assertTrue(v.checkFile(path));
+  }
+
+  @Test
+  public void checkInvalidParenthesis() {
+    ValidParenthesis v = ValidParenthesis.getInstance();
+    String str = "public static void main(String[])";
+    assertTrue(v.checkString(str));
+  }
 }
