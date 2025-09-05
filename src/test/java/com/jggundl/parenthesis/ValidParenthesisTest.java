@@ -31,7 +31,7 @@ public class ValidParenthesisTest {
     @Test
     public void checkValidParenthesisInFile() {
         ValidParenthesis v = ValidParenthesis.getInstance();
-        Path path = Paths.get("src/test/java/com/jggundl/parenthesis/FileTest.txt");
+        Path path = Paths.get("src/test/resources/FileTest.txt");
         assertTrue(v.checkFile(path));
     }
 }
